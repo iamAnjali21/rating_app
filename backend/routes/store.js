@@ -3,9 +3,7 @@ import connectDB from "../config/db.js";
 
 const router = express.Router();
 
-/**
- * GET /stores
- * Fetch all stores (for admin dashboard)
+/* GET /stores
  */
 router.get("/stores", async (req, res) => {
   try {
@@ -20,9 +18,7 @@ router.get("/stores", async (req, res) => {
   }
 });
 
-/**
- * GET /stores/:userId
- * Fetch all stores + this user's rating
+/* GET stores
  */
 router.get("/stores/user/:userId", async (req, res) => {
   try {
@@ -50,10 +46,7 @@ router.get("/stores/user/:userId", async (req, res) => {
   }
 });
 
-/**
- * POST /stores
- * Create a new store (Admin)
- */
+/* POST /stores*/
 router.post("/stores", async (req, res) => {
   try {
     const { name, email, address } = req.body;
