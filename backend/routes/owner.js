@@ -8,7 +8,7 @@ router.get("/stores/:ownerId", async (req, res) => {
   try {
     const ownerId = req.params.ownerId;
 
-    // Fetch all stores of this owner (avgRating already stored)
+   
     const [stores] = await pool.query(
       "SELECT id, name, email, address, avgRating FROM stores WHERE owner_id = ?",
       [ownerId]
