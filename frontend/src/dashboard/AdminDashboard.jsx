@@ -1,14 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  Table,
-  Button,
-  Form,
-  Card,
-  Container,
-  Row,
-  Col,
-  Modal,
-} from "react-bootstrap";
+import {Table,Button, Form, Card,Container, Row,Col,Modal,} from "react-bootstrap";
 import { fetchUsers, addUser, fetchStores, addStore, addrating, fetchRatings } from "../api";
 
 function AdminDashboard() {
