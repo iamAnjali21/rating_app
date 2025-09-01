@@ -3,10 +3,7 @@ import connectDB from "../config/db.js";
 
 const router = express.Router();
 
-/**
- * POST /ratings
- * Add or update a rating for a store
- */
+
 router.post("/ratings", async (req, res) => {
   try {
     const { userId, storeId, rating } = req.body;
@@ -42,10 +39,7 @@ router.post("/ratings", async (req, res) => {
   }
 });
 
-/**
- * GET /stores/:id/ratings
- * Fetch all ratings for a store
- */
+/* GET */
 router.get("/stores/:id/ratings", async (req, res) => {
   try {
     const storeId = req.params.id;
